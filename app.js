@@ -8,6 +8,7 @@ const productrRoutes = require('./api/routes/products');
 const ordersRoutes = require('./api/routes/orders');
 
 mongoose.connect('mongodb://localhost:27017/test');
+mongoose.Promise = global.Promise;
 
 // app.use((req, res, next) => {
 //   res.status(200).json({
