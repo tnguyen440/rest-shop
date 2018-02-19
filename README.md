@@ -1,2 +1,1 @@
 # rest-shop
-README
