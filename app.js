@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 const productrRoutes = require('./api/routes/products');
 const ordersRoutes = require('./api/routes/orders');
+const userRoutes = require('./api/routes/user');
 
 mongoose.connect('mongodb://localhost:27017/test');
 mongoose.Promise = global.Promise;
@@ -37,6 +38,7 @@ app.use((req,res, next) => {
 
 app.use('/products', productrRoutes);
 app.use('/orders', ordersRoutes);
+app.use('/user', userRoutes);
 
 // Errors Handling
 app.use('/*', (req, res, next) => {
